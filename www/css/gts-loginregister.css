@@ -1,0 +1,90 @@
+.gts-login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42rem;
+    width: 25rem;
+    margin: auto;
+}
+
+.gts-container-form {
+    text-align: center;
+
+}
+.gts-logo{
+    background-color: #91705A;
+    border: 5px solid #116A7B;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0.2rem;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
+}
+.gts-form{
+    background-color: white;
+    border: 5px solid #116A7B;
+    padding: 1rem;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
+}
+
+.formlogin-username{
+    border: 2px solid #116A7B;
+    border-radius: 10px 10px 10px 10px;
+    width: 20rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+.formlogin-password{
+    width: 16rem;
+    border: none;
+    outline: none;
+}
+
+.btnlogin{
+    margin-top: 2rem;
+    width: 15rem;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #116A7B;
+    color: white;
+    border: 2px solid #116A7B;
+    margin-bottom: 1rem;
+}
+.btnlogin:hover{
+    margin-top: 2rem;
+    width: 15rem;
+    border-radius: 20px 20px 20px 20px;
+    border: 2px solid #116A7B;
+    color: #116A7B;
+}
+
+.gts-container-formpass{
+    border: 2px solid #116A7B;
+    border-radius: 10px 10px 10px 10px;
+    width: 20rem;
+    height: 3rem;
+    margin-left: 2rem;
+    padding-left: 0.5rem;
+}
+
+.gts-form-component{
+    padding-top: 0.5rem;
+}
+.gts-eye-component{
+    padding-top: 0.4rem;
+}
+
+.gts-register-txt{
+    text-decoration: none;
+    color: #116A7B;
+}
+.gts-register-txt:hover{
+    text-decoration: none;
+    color: #116A7B;
+}
+
+.title-form{
+    margin-bottom: 1rem;
+}

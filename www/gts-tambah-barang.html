@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/gts-admin.css">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.css">
+</head>
+<body>
+
+    <div class="gts-admin-container row">
+        <div class="gts-side-menu col-4">
+            <img class="gts-logo" src="img/logo.png" alt="">
+            <br>
+
+            <a class="gts-container-btn1 row" href="gts-tambah-barang.html">
+                <div class="col-5">
+                    <img width="70px" src="img/add.png" alt="">
+                </div>
+                <div class="gts-component-btn col-5">
+                    <input class="form-label gts-menu-admin1" type="submit" value="Tambah Barang">
+                </div>
+            </a>
+            <a class="gts-container-btn row" href="gts-cek-barang.html">
+                <div class="col-5">
+                    <img width="70px" src="img/cek.png" alt="">
+                </div>
+                <div class="gts-component-btn col-5">
+                    <input class="form-label gts-menu-admin" type="submit" value="Cek Barang">
+                </div>
+            </a>
+            <a class="gts-container-btn row" href="gts-penjualan-barang.html">
+                <div class="col-5">
+                    <img class="img1" width="70px" src="img/history.png" alt="">
+                </div>
+                <div class="gts-component-btn col-5">
+                    <input class="form-label gts-menu-admin" type="submit" value="History Penjualan">
+                </div>
+            </a>
+
+        </div>
+        <div class="gts-main col-7">
+            <nav class="row navbar gts-container-avatar">
+                <div class="col-6 container-fluid">
+                    <a class="navbar-brand ini-txt-avatar" href="#">
+                        <img src="img/avatar.png" alt="Logo" width="35" height="35"
+                            class="d-inline-block align-text-top">
+                        Bootstrap
+                    </a>
+                </div>
+                <div class="col-6 container-fluid justify-content-end">
+                    <a class="navbar-brand" href="#">
+                        <input class="btn btn-logout" type="submit" value="Logout" id="signout-button">
+                    </a>
+                </div>
+            </nav>
+            <div class="gts-formadd-container">
+                <div class="gts-txt-add">
+                    <h3>Nama Barang</h3>
+                    <input class="formadd-barang" type="text" placeholder="Nama Barang" id="namabar" autocomplete="off">
+                </div>
+                <div class="gts-txt-add">
+                    <h3>Status Barang</h3>
+                    <input class="formadd-barang" type="text" placeholder="Status Barang" id="stsbar" autocomplete="off">
+                </div>
+                <div class="gts-txt-add">
+                    <h3>Jumlah Barang</h3>
+                    <input class="formadd-barang" type="text" placeholder="Jumlah Barang" id="jmlhbar" autocomplete="off">
+                </div>
+                <div class="gts-txt-add">
+                    <h3>Harga Barang</h3>
+                    <input class="formadd-barang" type="text" placeholder="Harga Barang" id="hrgbar" autocomplete="off">
+                </div>
+                <div class="gts-txt-add">
+                    <h3>Gambar Barang</h3>
+                    <input class="formadd-barang1" type="file" placeholder="Gambar Barang" id="gambar-input">
+                </div>
+                
+            </div>
+            <button class="formadd-barang1" id="tambah">Tambah Barang</button>
+        </div>
+    </div>
+
+</body>
+<script type="module" src="js/gts-tambah-barang.js"></script>
+<script type="module" src="js/gts-logout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
