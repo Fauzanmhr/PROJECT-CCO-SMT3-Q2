@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AdminGTShop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/gts-loginregister.css">
+</head>
+
+<body class="gts-bdy">
+    <div class="container-fluid position-relative d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sign In Start -->
+        <div class="gts-login-container">
+            <div class="gts-container-form row">
+
+                <div class="gts-form1">
+                    <div class="title-form">
+                        <h3 class="txt-login">Edit Barang</h3>
+                    </div>
+
+                    <input class="formlogin-username1" type="text" placeholder="Nama Barang" id="nambar"
+                        autocomplete="off">
+                    <input class="formlogin-username1" type="number" placeholder="Harga Barang" id="harbar"
+                        autocomplete="off" min="1">
+
+                    <div class="gts-txt-add">
+                        <select class="formlogin-username1" aria-label="Default select example" id="stabar">
+                            <option value="Ready">Ready</option>
+                            <option value="Not Ready">Not Ready</option>
+                        </select>
+                    </div>
+                    <input class="formlogin-username1" type="number" placeholder="Jumlah Barang" id="jumbar"
+                        autocomplete="off" min="1">
+                        
+                    <input class="formlogin-username2 form-control" type="file" placeholder="Jumlah Barang" id="gambarInput"
+                        autocomplete="off" min="1">
+
+                        <img id="gambarPreview" src="" alt="Preview Gambar" width="100" height="100">
+
+                    <div class="gts-btn-register">
+                        <button class="btn btnlogin" id="gts-update">Update</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Sign In End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/gts-showpw.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="js/gts-edit-barang.js"></script>
+</body>
+
+</html>

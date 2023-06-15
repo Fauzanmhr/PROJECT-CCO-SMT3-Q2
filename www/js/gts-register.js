@@ -1,23 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
 import {
   getDatabase,
   set,
   ref,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Konfigurasi Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyChGzVqa5uFCAfJcptW56D8w0AJp1FZEeo",
   authDomain: "growthshop-f2c01.firebaseapp.com",
@@ -33,114 +26,111 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
 
-
+//========= START - MEMBUAT FUNGSI UNTUK MELAKUKAN PROSES REGSITER =========\\
 let signupButton = document.getElementById("signup-button");
-
-signupButton.addEventListener("click", (e) => {  
+signupButton.addEventListener("click", (e) => {
   var name = document.getElementById("username").value;
   var nohp = document.getElementById("hp").value;
   var emailSignup = document.getElementById("email").value;
   var passwordSignup = document.getElementById("pass").value;
 
-
-  
+  //========= START - MEMBUAT FUNGSI UNTUK FORM KOSONG =========\\
   if (name == "") {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
     Toast.fire({
-      icon: 'warning',
-      title: 'Input Form Cannot Be Empty'
-    })
+      icon: "warning",
+      title: "Input Form Cannot Be Empty",
+    });
     return false;
   }
   if (nohp == "") {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
     Toast.fire({
-      icon: 'warning',
-      title: 'Input Form Cannot Be Empty'
-    })
+      icon: "warning",
+      title: "Input Form Cannot Be Empty",
+    });
     return false;
   }
   if (emailSignup == "") {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
     Toast.fire({
-      icon: 'warning',
-      title: 'Input Form Cannot Be Empty'
-    })
+      icon: "warning",
+      title: "Input Form Cannot Be Empty",
+    });
     return false;
   }
   if (passwordSignup == "") {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
     Toast.fire({
-      icon: 'warning',
-      title: 'Input Form Cannot Be Empty'
-    })
+      icon: "warning",
+      title: "Input Form Cannot Be Empty",
+    });
     return false;
   }
- 
+  //========= END - MEMBUAT FUNGSI UNTUK FORM KOSONG =========\\
 
-  
- //minimum password length validation  
-  if(passwordSignup.length < 6) {  
+  //========= START - MEMBUAT FUNGSI PANJANG KARAKTER PASSWORD =========\\
+  if (passwordSignup.length < 6) {
     const Toast = Swal.mixin({
       toast: true,
-      position: 'top-end',
+      position: "top-end",
       showConfirmButton: false,
       timer: 3000,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
     Toast.fire({
-      icon: 'error',
-      title: 'Password should be at least 6 characters'
-    })
+      icon: "error",
+      title: "Password should be at least 6 characters",
+    });
     return false;
-  }  
+  }
+  //========= END - MEMBUAT FUNGSI PANJANG KARAKTER PASSWORD =========\\
 
-  
-
+  //========= START - MEMBUAT FUNGSI REGISTER =========\\
   createUserWithEmailAndPassword(auth, emailSignup, passwordSignup)
     .then((userCredential) => {
       // Signed in
@@ -156,44 +146,46 @@ signupButton.addEventListener("click", (e) => {
           // Data saved successfully!
           const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: "top-end",
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-          
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
           Toast.fire({
-            icon: 'success',
-            title: 'User Berhasil Ditambahkan'
-          })
+            icon: "success",
+            title: "User Berhasil Ditambahkan",
+          }).then(function () {
+            window.location = "index.html"; // Redirecting to other page.
+          });
         })
         .catch((error) => {
           //the write failed
           alert(error);
-          
         });
     })
     .catch((error) => {
       const Toast = Swal.mixin({
         toast: true,
-        position: 'top-end',
+        position: "top-end",
         showConfirmButton: false,
         timer: 3000,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
       Toast.fire({
-        icon: 'error',
-        title: 'E-mail Already Registered'
-      })
+        icon: "error",
+        title: "E-mail Already Registered",
+      });
       return false;
     });
+  //========= END - MEMBUAT FUNGSI REGISTER =========\\
 });
-
+//========= END - MEMBUAT FUNGSI UNTUK MELAKUKAN PROSES REGSITER =========\\

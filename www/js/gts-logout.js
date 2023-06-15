@@ -1,21 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
-
 import {
   getAuth,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
-import {
-  getDatabase,
-} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Konfigurasi Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyChGzVqa5uFCAfJcptW56D8w0AJp1FZEeo",
   authDomain: "growthshop-f2c01.firebaseapp.com",
@@ -29,10 +19,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const database = getDatabase(app);
 
+//========= START - MEMBUAT FUNGSI UNTUK MELAKUKAN PROSES LOGOUT =========\\
 let signoutButton = document.getElementById("signout-button");
-
 signoutButton.addEventListener("click", (e) => {
   Swal.fire({
     title: "Are you sure?",
@@ -44,19 +33,23 @@ signoutButton.addEventListener("click", (e) => {
     confirmButtonText: "Yes, log out!",
   }).then((result) => {
     if (result.isConfirmed) {
-        signOut(auth).then(() => {
-            // Sign-out successful.
-            Swal.fire("Logged out!", "You have logged out", "success").then(function() {
-                window.location = "index.html"; // Redirecting to other page.
-            });
-          }).catch((error) => {
-            // An error happened.
+      signOut(auth)
+        .then(() => {
+          // Sign-out successful.
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "You have logged out",
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(function () {
+            window.location = "index.html"; // Redirecting to other page.
           });
-      
+        })
+        .catch((error) => {
+          // An error happened.
+        });
     }
-    
   });
-  
 });
-
-      
+//========= END - MEMBUAT FUNGSI UNTUK MELAKUKAN PROSES LOGOUT =========\\
