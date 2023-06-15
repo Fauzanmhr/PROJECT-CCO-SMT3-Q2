@@ -128,14 +128,15 @@ async function handleSearch() {
         //========= START - MEMBUAT BUTTON EDIT =========\\
         const tabelKolom = document.createElement("td");
         const tombolEdit = document.createElement("button");
-        tombolEdit.textContent = "Edit";
+        tombolEdit.textContent = "Konfirmasi";
         tombolEdit.classList.add("btn", "btn-info", "me-2");
         tombolEdit.addEventListener("click", () => {
           // Mengarahkan ke halaman edit dengan mengirim key sebagai parameter
-          window.location.href = `gts-edit-barang.html?key=${key}`;
+          window.location.href = `gts-penjualan-barang.html?key=${key}`;
         });
         tabelKolom.appendChild(tombolEdit);
         //========= END - MEMBUAT BUTTON EDIT =========\\
+
         row.appendChild(tabelKolom);
         
         searchResults.appendChild(row);
