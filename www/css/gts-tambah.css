@@ -1,0 +1,107 @@
+.gts-formadd-container{
+background-color: #324A51;
+margin-left: 1rem;
+width: fit-content;
+text-align: center;
+margin-top: 1rem;
+padding: 2rem;
+border-radius: 10px 10px 10px 10px;
+margin-bottom: 1rem;
+}
+.gts-formadd-container3{
+background-color: #324A51;
+margin-left: 1rem;
+width: 45rem;
+text-align: center;
+margin-top: 1rem;
+padding: 1rem;
+border-radius: 10px 10px 10px 10px;
+margin-bottom: 1rem;
+font-size: 13px;
+}
+.gts-formadd-container2{
+background-color: #324A51;
+margin-left: 1rem;
+width: fit-content;
+text-align: center;
+margin-top: 1rem;
+margin-left: 6rem;
+padding: 2rem;
+border-radius: 10px 10px 10px 10px;
+margin-bottom: 1rem;
+}
+.gts-formadd-container1{
+background-color: #324A51;
+margin-left: 1rem;
+width: 66rem;
+text-align: center;
+margin-top: 1rem;
+padding: 2rem;
+border-radius: 10px 10px 10px 10px;
+margin-bottom: 1rem;
+}
+.formadd-barang{
+    border: 6px solid #91705A;
+    border-radius: 10px 10px 10px 10px;
+    width: 62.5rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+.formadd-barang1{
+    border: 6px solid #91705A;
+    border-radius: 10px 10px 10px 10px;
+    width: 62.5rem;
+    height: 4.2rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+.formadd-barangs1{
+    border-radius: 10px 10px 10px 10px;
+    width: 62.5rem;
+    height: 4.2rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+    background-color: #116A7B;
+    color: white;
+}
+.formadd-barangs1:hover{
+    border-radius: 10px 10px 10px 10px;
+    width: 62.5rem;
+    height: 4.2rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+    background-color: #116A7B;
+    color: white;
+}
+
+.txt-tambah{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+th{
+    color: white;
+}
+
+td{
+    color: white;
+}
+
+.ininav{
+    height: 5rem;
+}
+
+.ini-admin{
+    color: whitesmoke;
+}
+
+input.ini-form-jualan{
+    color: white;
+    margin-bottom: 1rem;
+}

@@ -1,8 +1,24 @@
+.gts-bdy{
+    background: #005C42;
+}
+
+.ini-bg-login{
+    background-color: #116A7B;
+}
+
 .gts-login-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 42rem;
+    width: 25rem;
+    margin: auto;
+}
+.gts-login-container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
     width: 25rem;
     margin: auto;
 }
@@ -13,7 +29,7 @@
 }
 .gts-logo{
     background-color: #91705A;
-    border: 5px solid #116A7B;
+    border: 5px solid #F9F871;
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-bottom: 0.2rem;
@@ -22,9 +38,18 @@
 }
 .gts-form{
     background-color: white;
-    border: 5px solid #116A7B;
+    border: 5px solid white;
     padding: 1rem;
     border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
+}
+.gts-form1{
+    background-color: white;
+    border: 5px solid white;
+    padding: 1rem;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
 }
 
@@ -36,6 +61,25 @@
     margin-bottom: 1rem;
     padding-left: 1.5rem;
     padding-right: 2rem;
+}
+.formlogin-username1{
+    border: 2px solid #116A7B;
+    border-radius: 10px 10px 10px 10px;
+    width: 25rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+}
+.formlogin-username2{
+    border: 2px solid #116A7B;
+    border-radius: 10px 10px 10px 10px;
+    width: 25rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    padding-top: 1.2rem;
 }
 .formlogin-password{
     width: 16rem;
@@ -87,4 +131,13 @@
 
 .title-form{
     margin-bottom: 1rem;
+    color: black;
+}
+
+h3.txt-login{
+    color: black;
+}
+
+.gts-daftar{
+    color: #FB9039;
 }
